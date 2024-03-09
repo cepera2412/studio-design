@@ -1,0 +1,17 @@
+.articles {
+	padding: $s-pad 0;
+	text-align: center;
+
+	&__text {
+		margin: 12px auto 52px;
+		max-width: 811px;
+	}
+
+	&__cards {
+		@include f-sb(27);
+
+		@include tablet {
+			@include f-col(30);
+		}
+	}
+}

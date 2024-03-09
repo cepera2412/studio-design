@@ -1,0 +1,184 @@
+// --------------------------------------------Grid
+@mixin grid($column, $size-column, $gap: 0) {
+	display: grid;
+	grid-template-columns: repeat($column, $size-column);
+	gap: $gap + px;
+}
+
+@mixin grid-auto($min, $max, $gap: 0) {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax($min, $max));
+	gap: $gap + px;
+}
+
+@mixin grid2($column1, $column2, $gap: 0) {
+	display: grid;
+	grid-template-columns: $column1 $column2;
+	gap: $gap + px;
+}
+
+// ---------------------------------------------Flex
+@mixin f-col($gap: 0) {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: $gap + px;
+}
+
+@mixin f-w($gap: 0) {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: $gap + px;
+}
+
+@mixin f-c($gap: 0) {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: $gap + px;
+}
+
+@mixin f-sb($gap: 0) {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: $gap + px;
+}
+
+@mixin f-sa($gap: 0) {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	gap: $gap + px;
+}
+
+//---------------------------------------- images
+@mixin bg($img) {
+	@extend %bg;
+	background-image: $img;
+}
+
+//------------------------------------------ Button
+@mixin btn($position: left, $max-width: 220) {
+	@extend %button;
+	justify-self: $position;
+	max-width: $max-width + px;
+}
+
+@mixin btn-accent($position, $max-width: 220) {
+	@extend %button-accent;
+	justify-self: $position;
+	max-width: $max-width + px;
+}
+
+// ---------------------------------------- Link`s
+@mixin link() {
+	@extend %link;
+}
+
+@mixin icon() {
+	@extend %icon;
+}
+
+// ========================================== Absolute
+@mixin absolute($top: 0, $right: 0, $bottom: 0, $left: 0) {
+	position: absolute;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+}
+
+//  =========================================== Align
+@mixin align($horizontal, $vertical) {
+	@if $horizontal == 'c' and $vertical == 'c' {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	} @else if $horizontal == 'l' and $vertical == 't' {
+		top: 0;
+		left: 0;
+	} @else if $horizontal == 'c' and $vertical == 't' {
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	} @else if $horizontal == 'r' and $vertical == 't' {
+		top: 0;
+		right: 0;
+	} @else if $horizontal == 'l' and $vertical == 'c' {
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+	} @else if $horizontal == 'r' and $vertical == 'c' {
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%);
+	} @else if $horizontal == 'l' and $vertical == 'b' {
+		bottom: 0;
+		left: 0;
+	} @else if $horizontal == 'c' and $vertical == 'b' {
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	} @else if $horizontal == 'r' and $vertical == 'b' {
+		bottom: 0;
+		right: 0;
+	}
+}
+
+// ======================================= Адаптив значений
+@mixin adaptive-value(
+	$property,
+	$startSize,
+	$minSize,
+	$type,
+	$minWidth: $minWidth
+) {
+	$addSize: $startSize - $minSize;
+	@if $type==1 {
+		//  Только для меньше контейнера
+		#{$property}: #{$startSize}px;
+		@media (max-width: #{$containerWidth}px) {
+			#{$property}: calc(
+				#{$minSize}px + #{$addSize} * ((100vw - #{$minWidth}px) / #{$containerWidth -
+							$minWidth})
+			);
+		}
+	} @else if $type==2 {
+		//  Только для больше контейнера
+		#{$property}: #{$startSize}px;
+		@media (min-width: #{$containerWidth}px) {
+			#{$property}: calc(
+				#{$minSize}px + #{$addSize} * ((100vw - #{$minWidth}px) / #{$maxWidth -
+							$minWidth})
+			);
+		}
+	} @else {
+		#{$property}: calc(
+			#{$minSize}px +
+				#{$addSize} *
+				((100vw - #{$minWidth}px) / #{$maxWidth - $minWidth})
+		);
+	}
+}
+
+// =====================================  media
+@mixin mini-pk {
+	@media (max-width: 1199px) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (max-width: 999px) {
+		@content;
+	}
+}
+
+@mixin mob {
+	@media (max-width: 767px) {
+		@content;
+	}
+}

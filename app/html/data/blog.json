@@ -1,0 +1,40 @@
+[
+	{
+		"img": "s5-articles1.png",
+		"link": "Kitchen Design",
+		"title": "Let’s Get Solution For Building Construction Work",
+		"text": "26 December,2022"
+	},
+	{
+		"class-card": "article-card--active",
+		"img": "s5-articles2.png",
+		"link": "Living Design",
+		"title": "Low Cost Latest Invented Interior Designing Ideas..",
+		"text": "22 December,2022",
+		"class-btn": "article-card__desc-link--active"
+	},
+	{
+		"img": "s5-articles3.png",
+		"link": "Interior Design",
+		"title": "Best For Any Office & Business Interior Solution",
+		"text": "25 December,2022"
+	},
+	{
+		"img": "s5-articles4.png",
+		"link": "Kitchen Design",
+		"title": "Let’s Get Solution For Building Construction Work",
+		"text": "18 December,2022"
+	},
+	{
+		"img": "s5-articles5.png",
+		"link": "Living Design",
+		"title": "Low Cost Latest Invented Interior Designing Ideas..",
+		"text": "16 December,2022"
+	},
+	{
+		"img": "s5-articles6.png",
+		"link": "Interior Design",
+		"title": "Best For Any Office & Business Interior Solution",
+		"text": "19 December,2022"
+	}
+]

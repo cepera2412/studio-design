@@ -1,0 +1,65 @@
+.about-section {
+	padding: $s-pad 0;
+	text-align: center;
+
+	&__img {
+		padding-bottom: calc($s-pad - 10px);
+	}
+
+	&__inner {
+		@include f-col(150);
+		text-align: left;
+	}
+
+	&__do {
+		@include f-sb(36);
+
+		@include mini-pk {
+			@include f-c(40);
+			flex-wrap: wrap-reverse;
+			text-align: center;
+		}
+
+		&-content {
+			max-width: 500px;
+		}
+
+		&-text {
+			margin: 23px 0 41px;
+		}
+
+		&-btn {
+			@include btn;
+
+			@include mini-pk {
+				margin: 0 auto;
+			}
+		}
+	}
+
+	&__end {
+		@include f-sb;
+		@include adaptive-value('gap', 92, 0, 1);
+
+		@include mini-pk {
+			@include f-w(40);
+			text-align: center;
+		}
+
+		&-content {
+			max-width: 452px;
+		}
+
+		&-text {
+			margin: 23px 0 41px;
+		}
+
+		&-btn {
+			@include btn;
+
+			@include mini-pk {
+				margin: 0 auto;
+			}
+		}
+	}
+}

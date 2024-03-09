@@ -1,0 +1,42 @@
+.statistics {
+	padding: $s-pad-accent 0;
+	background-color: $accent-bg;
+
+	&__inner {
+		@include f-c;
+		text-align: center;
+
+		@include tablet {
+			@include grid(2, 1fr, 50);
+		}
+	}
+
+	&__content {
+		border-right: 1px solid $accent-clr;
+
+		@include tablet {
+			border: none;
+		}
+
+		&:last-child {
+			border-right: none;
+		}
+	}
+
+	&__span {
+		@include adaptive-value('font-size', 80, 50, 1);
+		color: $accent-clr;
+		font-family: $font-accent;
+		line-height: 1.25;
+		letter-spacing: 5px;
+		padding: 0 clamp(3.125rem, 2.161rem + 4.821vw, 6.5rem);
+
+		@include mob {
+			padding: 0;
+		}
+	}
+
+	&__text {
+		margin-top: 16px;
+	}
+}

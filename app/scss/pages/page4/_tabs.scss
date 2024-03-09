@@ -1,0 +1,75 @@
+.project-tabs {
+	padding: $s-pad 0;
+
+	&__tab {
+		margin: 0 auto 60px;
+		@include f-sa;
+		max-width: 880px;
+
+		border: 1px solid $accent-clr;
+		border-radius: 18px;
+
+		@include mob {
+			@include f-col();
+			width: 250px;
+		}
+	}
+
+	&__btn {
+		padding: 26px 66px;
+
+		color: $black-clr;
+		font-size: $fz-sm + px;
+		font-weight: 600;
+		line-height: 1.25;
+		letter-spacing: calc($fz-sm * 0.02) + px;
+
+		&--active {
+			color: $white-clr;
+			background-color: $accent-btn;
+			border-radius: 18px;
+		}
+	}
+
+	&__block {
+		column-count: 2; /* задаем количество колонок */
+		column-gap: 28px; /* задаем промежуток между колонками */
+
+		@include mob {
+			@include f-col(30);
+		}
+
+		&--hidden {
+			display: none;
+		}
+	}
+
+	&__page {
+		@include f-c(20);
+		margin-top: 61px;
+
+		&-link {
+			width: 52px;
+			height: 52px;
+			line-height: 52px;
+
+			color: $black-clr;
+			font-size: 16px;
+			font-weight: 500;
+			letter-spacing: 0;
+
+			text-align: center;
+			border: 1px solid $accent-clr;
+			border-radius: 50%;
+
+			&--active {
+				background-color: $accent-bg;
+			}
+		}
+	}
+}
+
+.card {
+	break-inside: avoid; /* предотвращаем разрыв карточек между колонками */
+	margin-bottom: 20px;
+}

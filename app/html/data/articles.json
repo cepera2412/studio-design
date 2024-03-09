@@ -1,0 +1,22 @@
+[
+	{
+		"img": "s1-articles1.png",
+		"link": "Kitchen Design",
+		"title": "Modern KitchenLet’s Get Solution For Building Construction Work",
+		"text": "26 December,2022"
+	},
+	{
+		"class-card": "article-card--active",
+		"img": "s1-articles2.png",
+		"link": "Living Design",
+		"title": "Low Cost Latest Invented Interior Designing Ideas..",
+		"text": "22 December,2022",
+		"class-btn": "article-card__desc-link--active"
+	},
+	{
+		"img": "s1-articles3.png",
+		"link": "Interior Design",
+		"title": "Best For Any Office & Business Interior Solution",
+		"text": "25 December,2022"
+	}
+]

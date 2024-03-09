@@ -1,0 +1,108 @@
+.blog-articles {
+	padding-bottom: $s-pad;
+
+	&__cards {
+		@include f-w(27);
+		margin-top: 30px;
+	}
+
+	&__card {
+		max-width: 382px;
+		padding: 21px;
+		border: 1px solid rgb(231, 231, 231);
+		border-radius: 62px;
+
+		box-shadow: 0px 10px 30px 0px rgba(255, 255, 255, 0.25);
+
+		&--active {
+			background-color: $accent-bg;
+		}
+
+		&-picture {
+			position: relative;
+
+			&-text {
+				position: absolute;
+				left: 20px;
+				bottom: 24px;
+
+				font-size: 16px;
+
+				padding: 8px;
+				max-width: 124px;
+				width: 100%;
+
+				background-color: $white-bg;
+				border-radius: 8px 8px 8px 0px;
+			}
+		}
+
+		&-title {
+			padding: 8px 0 20px;
+			max-width: 289px;
+
+			text-align: left;
+			letter-spacing: calc($fz-xl * 0.02);
+		}
+
+		&-desc {
+			margin-bottom: 17px;
+			@include f-sb;
+			font-size: 16px;
+
+			&-link {
+				max-width: 50px;
+				background-color: $accent-bg;
+				border-radius: 50%;
+
+				transition: all 0.3s ease;
+
+				&:hover,
+				&:focus {
+					background-color: $accent-bg;
+					border-radius: 25px;
+					opacity: 0.5;
+				}
+
+				&:active {
+					opacity: 1;
+					box-shadow: 0px 10px 20px 0px rgb(31, 32, 34);
+				}
+
+				&--active {
+					background-color: $white-bg;
+
+					&:hover,
+					&:focus {
+						background-color: #ecd8c4;
+						opacity: 0.5;
+					}
+				}
+			}
+		}
+	}
+
+	&__page {
+		@include f-c(20);
+		margin-top: 51px;
+
+		&-link {
+			width: 52px;
+			height: 52px;
+			line-height: 52px;
+
+			color: $black-clr;
+			font-size: 16px;
+			font-weight: 500;
+			letter-spacing: 0;
+
+			text-align: center;
+			border: 1px solid $accent-clr;
+			border-radius: 50%;
+
+			&--active {
+				background-color: $accent-bg;
+			}
+		}
+	}
+}

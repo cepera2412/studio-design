@@ -1,0 +1,75 @@
+.article-card {
+	max-width: 382px;
+	padding: 21px;
+	border: 1px solid rgb(231, 231, 231);
+	border-radius: 62px;
+
+	box-shadow: 0px 10px 30px 0px rgba(255, 255, 255, 0.25);
+
+	&--active {
+		background-color: $accent-bg;
+	}
+
+	&__picture {
+		position: relative;
+
+		&-text {
+			position: absolute;
+			left: 20px;
+			bottom: 24px;
+
+			font-size: 16px;
+
+			padding: 8px 0;
+			max-width: 124px;
+			width: 100%;
+
+			background-color: $white-bg;
+			border-radius: 8px 8px 8px 0px;
+		}
+	}
+
+	&__title {
+		padding: 8px 0 20px;
+		max-width: 289px;
+
+		text-align: left;
+		letter-spacing: calc($fz-xl * 0.02) + px;
+	}
+
+	&__desc {
+		margin-bottom: 17px;
+		@include f-sb;
+		font-size: 16px;
+
+		&-link {
+			max-width: 50px;
+			background-color: $accent-bg;
+			border-radius: 50%;
+
+			transition: all 0.4s ease;
+
+			&:hover,
+			&:focus {
+				background-color: $accent-btn;
+				border-radius: 25px;
+				opacity: 0.5;
+			}
+
+			&:active {
+				opacity: 1;
+				box-shadow: 0px 10px 20px 0px rgb(31, 32, 34);
+			}
+
+			&--active {
+				background-color: $white-bg;
+
+				&:hover,
+				&:focus {
+					background-color: #ecd8c4;
+					opacity: 0.5;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,37 @@
+.info {
+	padding: $s-pad 0;
+
+	&__inner {
+		@include f-w(42);
+		text-align: center;
+	}
+
+	&__content {
+		flex-basis: 258px;
+		flex-grow: 1;
+	}
+
+	&__text {
+		margin: 20px 0 clamp(1.25rem, 0.679rem + 2.857vw, 3.25rem);
+	}
+
+	&__link {
+		@include f-c(12);
+		@include adaptive-value('font-size', $fz-sm, 14, 1);
+		font-weight: 600;
+		line-height: 1.25;
+		letter-spacing: calc($fz-sm * 0.02);
+
+		transition: all 0.3s ease-in;
+
+		&:hover,
+		&:focus {
+			opacity: 0.6;
+		}
+
+		&:active {
+			color: $accent-clr;
+			opacity: 1;
+		}
+	}
+}

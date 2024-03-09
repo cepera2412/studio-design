@@ -1,0 +1,8 @@
+.brands {
+	padding: $s-pad-accent;
+
+	&__inner {
+		@include f-w;
+		@include adaptive-value('gap', 108, 40, 1);
+	}
+}

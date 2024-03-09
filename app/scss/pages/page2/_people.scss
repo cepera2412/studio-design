@@ -1,0 +1,15 @@
+.about-people {
+	background-color: $accent-bg;
+	padding: calc($s-pad - 15px) 0;
+
+	&__title {
+		max-width: 547px;
+		margin: 0 auto 40px;
+
+		text-align: center;
+	}
+
+	&__cards {
+		@include f-w(22);
+	}
+}

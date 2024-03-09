@@ -1,0 +1,23 @@
+.container__box {
+	display: flex;
+	justify-content: center;
+}
+
+.contact-hero {
+	background-image: url(../img/s6-hero.jpg);
+	height: 344px;
+	display: flex;
+
+	&__inner {
+		margin-top: 166px;
+		padding: 41px 0;
+		max-width: 503px;
+		width: 100%;
+		border-radius: 37px 37px 0px 0px;
+
+		background-color: $white-bg;
+		text-align: center;
+		align-items: end;
+		justify-content: center;
+	}
+}

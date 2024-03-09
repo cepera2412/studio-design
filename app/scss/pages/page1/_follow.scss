@@ -1,0 +1,23 @@
+.follow {
+	padding-bottom: $s-pad;
+
+	&__title {
+		margin-bottom: 8px;
+		text-align: center;
+	}
+
+	&__text {
+		margin: 0 auto;
+		margin-bottom: clamp(1.875rem, 0.75rem + 5.625vw, 5.813rem);
+		max-width: 737px;
+
+		text-align: center;
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 66px 98px;
+		justify-content: center;
+	}
+}

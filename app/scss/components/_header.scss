@@ -1,0 +1,81 @@
+.header {
+	padding: 53px 0 57px;
+
+	&__inner {
+		@include grid2(1fr, 52px);
+	}
+
+	&__menu {
+		@include f-sb(15);
+
+		&-logo {
+			@include f-c(8);
+			font-family: $font-accent;
+			color: $black-clr;
+			@include adaptive-value('font-size', 40, 25, 1);
+			line-height: 1.25;
+			@include link;
+
+			&-img {
+				@include adaptive-value('width', 34, 20, 1);
+			}
+		}
+
+		&-list {
+			@include f-c;
+			@include adaptive-value('gap', 48, 25, 1, 800);
+			color: $black-clr;
+			@include adaptive-value('font-size', 20, 16, 1);
+			line-height: 1.25;
+
+			@include mob {
+				display: none;
+			}
+		}
+		&-link {
+			@include link;
+		}
+	}
+
+	&__search {
+		justify-self: end;
+		transition: all 0.3s ease-in;
+
+		@include mob {
+			display: none;
+		}
+
+		&:hover,
+		&:focus,
+		&:active {
+			color: $accent-clr;
+		}
+
+		&-img {
+			display: block;
+			margin: auto;
+			stroke: currentColor;
+		}
+
+		&-input {
+			display: none;
+			@include absolute(0, 55px, 0, 1fr);
+			width: 300px;
+			padding: 5px 15px;
+			background-color: $white-bg;
+			border: 1px solid $black-clr;
+
+			&::placeholder {
+				color: $main-clr;
+				opacity: 0.6;
+			}
+
+			&:focus,
+			&:active {
+				color: $accent-clr;
+				caret-color: $accent-clr;
+				border: 2px solid $accent-clr;
+			}
+		}
+	}
+}

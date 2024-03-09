@@ -1,0 +1,101 @@
+.pricing-plans {
+	padding: $s-pad-accent 0;
+
+	&__inner {
+		@include f-sb;
+		@include adaptive-value('gap', 48, 20, 1, 999);
+		text-align: center;
+
+		@include tablet {
+			@include f-col(35);
+		}
+	}
+
+	&__card {
+		padding: 64px 0;
+		max-width: 368px;
+		width: 100%;
+		min-height: 722px;
+
+		background-color: $accent-bg;
+		border-radius: 33px;
+	}
+
+	&__content-title {
+		padding-left: 45px;
+		padding-right: 45px;
+		border-bottom: 1px solid $accent-clr;
+	}
+
+	&__price {
+		margin-top: 10px;
+		padding-bottom: 30px;
+	}
+
+	&__span {
+		@include adaptive-value('font-size', 85, 60, 1);
+
+		&--active {
+			color: $accent-clr;
+		}
+	}
+
+	&__content-desc {
+		display: grid;
+		position: relative;
+		padding-left: clamp(0.938rem, -8.438rem + 12.5vw, 2.813rem);
+		padding-right: clamp(0.938rem, -8.438rem + 12.5vw, 2.813rem);
+	}
+
+	&__text {
+		font-size: 20px;
+		line-height: 2.5;
+		margin-top: 28px;
+		margin-bottom: 28px;
+	}
+
+	&__link {
+		box-shadow: none;
+		@include btn-accent(center);
+		transition: all 0.3s linear;
+
+		&--active {
+			@include btn(center);
+		}
+
+		&:hover,
+		&:focus {
+			background-color: #d6b189;
+			box-shadow: 0px 10px 7px 0px rgba(78, 77, 77, 0.35);
+		}
+
+		&:active {
+			background-color: $black-bg;
+			color: $white-clr;
+			box-shadow: 0px 10px 20px 10px rgba(192, 192, 192, 0.35);
+
+			&::after {
+				content: url('../img/page.svg');
+			}
+		}
+	}
+
+	&__desc {
+		position: absolute;
+		top: -22px;
+		left: 50%;
+		transform: translate(-50%, 0);
+
+		max-width: 238px;
+		width: 100%;
+
+		padding: 10px;
+		background-color: $black-bg;
+		border-radius: 18px;
+
+		font-size: $fz-sm + px;
+		font-weight: 600;
+		line-height: 1.25;
+		color: $white-clr;
+	}
+}

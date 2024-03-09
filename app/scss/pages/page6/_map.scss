@@ -1,0 +1,10 @@
+.contact-map {
+	&__inner {
+		margin-bottom: $s-pad;
+		position: relative;
+	}
+
+	&__link {
+		@include absolute;
+	}
+}

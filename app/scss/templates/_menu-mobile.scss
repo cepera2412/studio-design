@@ -1,0 +1,48 @@
+.header {
+	&__menu-mobile {
+		position: fixed;
+		top: -100%;
+		right: 0;
+		// width: 50%;
+		width: clamp(12.5rem, 3.551rem + 44.743vw, 25rem);
+		height: 100%;
+		z-index: 5;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding-top: 40px;
+		padding-bottom: 40px;
+
+		// background: linear-gradient(209deg, #4287b3 -17.38%, #133f6b 78.4%), #276195;
+		color: $white-clr;
+		background-color: $black-bg;
+		transition: all 0.2s ease-in;
+
+		&-input {
+			color: $accent-clr;
+			padding-bottom: 60px;
+		}
+
+		&-list {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 25px;
+			font-size: 25px;
+
+			& .active {
+				opacity: 0.5;
+			}
+		}
+		&__link {
+			color: $white-clr;
+			@include link;
+		}
+
+		&--open {
+			top: 0;
+		}
+	}
+}

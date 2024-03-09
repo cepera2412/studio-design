@@ -1,0 +1,56 @@
+.blog-post {
+	padding: $s-pad 0 $s-pad-accent;
+
+	&__inner {
+		margin-top: 27px;
+		padding: 22px;
+		@include f-sb(65);
+		border-radius: 62px;
+		border: 1px solid rgb(231, 231, 231);
+
+		box-shadow: 0px 10px 30px 0px rgba(255, 255, 255, 0.25);
+
+		@include mini-pk {
+			@include f-col(50);
+		}
+	}
+
+	&__content {
+		padding-right: 38px;
+
+		@include tablet {
+			padding-right: 0;
+		}
+
+		&-text {
+			margin: 22px 0 32px;
+		}
+
+		&-block {
+			@include f-sb;
+			margin-top: 41px;
+			font-size: 16px;
+		}
+
+		&-btn {
+			width: 52px;
+			font-size: 13px;
+			background-color: $accent-bg;
+			border-radius: 50%;
+
+			transition: all 0.3s ease;
+
+			&:hover,
+			&:focus {
+				background-color: $accent-bg;
+				border-radius: 25px;
+				opacity: 0.5;
+			}
+
+			&:active {
+				opacity: 1;
+				box-shadow: 0px 10px 20px 0px rgb(31, 32, 34);
+			}
+		}
+	}
+}

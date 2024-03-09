@@ -1,0 +1,38 @@
+[
+	{
+		"img": "s2-people1.jpg",
+		"title": "Mikle Cools",
+		"text": "Design, USA",
+		"link-tel": "tel:+12312313232",
+		"tel": "+1 (231) 231-32-32",
+		"link-email": "mailto:mikle@email.com",
+		"email": "mikle@email.com"
+	},
+	{
+		"img": "s2-people2.jpg",
+		"title": "Natasha Julie",
+		"text": "Design, Australia",
+		"link-tel": "tel:+13784001234",
+		"tel": "+1 (378) 400-1234",
+		"link-email": "mailto:julie@email.com",
+		"email": "julie@email.com"
+	},
+	{
+		"img": "s2-people1.jpg",
+		"title": "Alex Norman",
+		"text": "Design, Australia",
+		"link-tel": "tel:+35007892123",
+		"tel": "+3 (500) 789-21-23",
+		"link-email": "mailto:norman@email.com",
+		"email": "norman@email.com"
+	},
+	{
+		"img": "s2-people4.jpg",
+		"title": "Alisa Work",
+		"text": "Design, Indonesiya",
+		"link-tel": "tel:+9999555500",
+		"tel": "+9 (999) 555-55-00",
+		"link-email": "mailto:alisa-work@email.com",
+		"email": "alisa-work@email.com"
+	}
+]

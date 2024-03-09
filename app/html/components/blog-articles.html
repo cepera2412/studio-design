@@ -1,0 +1,26 @@
+<!-- Articles & News -->
+<section class="blog-articles">
+	<div class="container">
+		<h2 class="blog-articles__title h2">Articles & News</h2>
+		<div class="blog-articles__cards">
+			@@loop('./templates/article.html', './data/blog.json')
+		</div>
+
+		<div class="blog-articles__page">
+			<a
+				href="#!"
+				class="blog-articles__page-link blog-articles__page-link--active"
+				>01</a
+			>
+			<a href="#!" class="blog-articles__page-link">02</a>
+			<a href="#!" class="blog-articles__page-link">03</a>
+			<a href="#!" class="blog-articles__page-link"
+				><img
+					src="./img/page-circol.svg"
+					alt="page"
+					class="blog-articles__page-link"
+			/></a>
+		</div>
+	</div>
+</section>
+<!-- end Articles & News -->

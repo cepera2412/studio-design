@@ -1,0 +1,68 @@
+.faq-project {
+	padding-bottom: $s-pad;
+
+	&__inner {
+		@include grid(2, 1fr, 50);
+
+		@include tablet {
+			@include f-w(35);
+		}
+	}
+
+	&__title {
+		margin-bottom: 50px;
+		text-align: center;
+	}
+
+	&__content {
+		margin-top: 20px;
+		padding-bottom: 31px;
+		border-bottom: 1px solid $accent-clr;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&-title {
+			margin-bottom: 13px;
+			line-height: 1.5;
+			letter-spacing: calc($fz-xl * 0.01) + px;
+			position: relative;
+
+			cursor: pointer;
+			transition: color 0.3s ease-in;
+
+			&--active {
+				color: $accent-clr;
+			}
+
+			&::after {
+				content: '';
+				background-image: url(../img/page-circol.svg);
+				transform: scale(0.75);
+				position: absolute;
+				top: -14px;
+				right: 0px;
+				width: 50px;
+				height: 50px;
+			}
+		}
+
+		&-text {
+			max-height: 0;
+			overflow: hidden;
+			opacity: 0;
+			transition: max-height 0.3s ease-in, opacity 1.5s linear;
+		}
+	}
+
+	&__picture {
+		text-align: center;
+	}
+}
+
+.faq-project__content-title.rotate::after {
+	transform: translate(-50%, -50%) rotate(90deg);
+	top: 10px;
+	right: -50px;
+}

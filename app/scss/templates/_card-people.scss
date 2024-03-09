@@ -1,0 +1,61 @@
+.card-people {
+	&__item {
+		max-width: 283px;
+		position: relative;
+	}
+
+	&__img {
+		border-radius: 20px;
+	}
+
+	&__content {
+		@include absolute;
+		pointer-events: none;
+
+		display: grid;
+		justify-content: center;
+		text-align: center;
+
+		opacity: 0;
+		max-width: 283px;
+		width: 100%;
+
+		max-height: 433px;
+		height: 100%;
+		font-size: $fz-sm + px;
+		background-color: $white-bg;
+		border-radius: 20px;
+		transition: opacity 2s;
+
+		&-title {
+			@include adaptive-value('margin-top', 70, 25, 1);
+		}
+
+		&-soc {
+			@include adaptive-value('margin-top', 65, 25, 1);
+			@include adaptive-value('margin-bottom', 65, 25, 1);
+			@include f-c(35);
+			color: $black-clr;
+		}
+
+		&-tel,
+		&-mail {
+			display: block;
+			margin-bottom: 5px;
+			transition: all 0.3s ease-in;
+
+			&:hover,
+			&:focus {
+				color: $accent-clr;
+			}
+
+			&:active {
+				opacity: 0.6;
+			}
+		}
+
+		&-mail {
+			@include adaptive-value('margin-bottom', 70, 25, 1);
+		}
+	}
+}

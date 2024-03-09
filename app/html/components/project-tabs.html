@@ -1,0 +1,58 @@
+<!-- Project Tabs -->
+<section class="project-tabs">
+	<div class="container">
+		<!-- Tabs BUTTON -->
+		<div class="project-tabs__tab">
+			<button data-tab="tab-1" class="project-tabs__btn">Bathroom</button>
+			<button data-tab="tab-2" class="project-tabs__btn">Bed Room</button>
+			<button data-tab="tab-3" class="project-tabs__btn">Kitchen</button>
+			<button data-tab="tab-4" class="project-tabs__btn">Living Area</button>
+		</div>
+		<!-- end Tabs BUTTON -->
+
+		<!-- CARDS -->
+
+		<!-- Block 1 -->
+		<div id="tab-1" class="project-tabs__block project-tabs__block--hidden">
+			@@loop('templates/card.html', './data/tabs-bathroom.json')
+		</div>
+		<!-- end Block 1 -->
+
+		<!-- Block 2 -->
+		<div id="tab-2" class="project-tabs__block project-tabs__block--hidden">
+			@@loop('templates/card.html', './data/tabs-bedroom.json')
+		</div>
+		<!-- end Block 2 -->
+
+		<!-- Block 3 -->
+		<div id="tab-3" class="project-tabs__block project-tabs__block--hidden">
+			@@loop('templates/card.html', './data/tabs-kitchen.json')
+		</div>
+		<!-- end Block 3 -->
+
+		<!-- Block 4 -->
+		<div id="tab-4" class="project-tabs__block project-tabs__block--hidden">
+			@@loop('templates/card.html', './data/tabs-livingroom.json')
+		</div>
+		<!-- end Block 4 -->
+
+		<div class="project-tabs__page">
+			<a
+				href="#!"
+				class="project-tabs__page-link project-tabs__page-link--active"
+				>01</a
+			>
+			<a href="#!" class="project-tabs__page-link">02</a>
+			<a href="#!" class="project-tabs__page-link">03</a>
+			<a href="#!" class="project-tabs__page-link"
+				><img
+					src="./img/page-circol.svg"
+					alt="page"
+					class="project-tabs__page-link"
+			/></a>
+		</div>
+
+		<!-- end CARDS -->
+	</div>
+</section>
+<!-- end Project Tabs -->

@@ -1,0 +1,32 @@
+.people-thinks {
+	padding-top: $s-pad;
+
+	&__inner {
+		background-color: $accent-bg;
+		border-radius: 70px;
+
+		@include mob {
+			border-radius: 0;
+		}
+	}
+
+	&__title {
+		padding: 88px 0 38px;
+		margin: 0 auto;
+
+		max-width: 547px;
+		text-align: center;
+	}
+
+	&__content {
+		@include f-w(20);
+		padding: 0 10px 88px 10px;
+	}
+
+	&__img {
+		flex: 1 1 auto;
+		width: clamp(18.75rem, 16.761rem + 7.071vw, 23.125rem);
+		max-width: 540px;
+		border-radius: 30px;
+	}
+}

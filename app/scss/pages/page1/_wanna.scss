@@ -1,0 +1,29 @@
+.wanna {
+	padding-bottom: $s-pad;
+
+	&__inner {
+		padding: 80px 10px;
+		border-radius: 70px;
+		display: grid;
+
+		@include mob {
+			border-radius: 0;
+		}
+
+		background-color: $black-bg;
+		color: $white-clr;
+		text-align: center;
+	}
+
+	&__title {
+		color: $white-clr;
+		margin-bottom: 11px;
+
+		letter-spacing: 0;
+	}
+
+	&__btn {
+		@include btn-accent(center, 238);
+		margin-top: 32px;
+	}
+}
